@@ -1,22 +1,24 @@
-create database eventoMusical 
+CREATE DATABASE eventoMusical;
 
-use eventoMusical
+USE eventoMusical;
 
-create table if not exists musicos(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome varchar(255) NOT NULL INT,
-    artista VARCHAR(255) NOT NULL INT,
-    disponivel BOOLEAN,
-    descricao varchar(255) not null int,
-    situacao VARCHAR(255) NOT NULL INT,
-    horario DATE NOT NULL DEFAULT indefinido,
-    localizacao varchar(255) not null int ,
-    preco numeric(10,3) null,
-    contraint fk_musiCat foreign key(categoria) references musicos(id),
-    foto 
-)
+CREATE TABLE IF NOT EXISTS categoria (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    categoria VARCHAR(33) NOT NULL
+);
 
-create table if not exists catageria(
-    id int AUTO_INCREMENT primary key,
-    categoria not null int varchar(55)
-)
+CREATE TABLE IF NOT EXISTS eventos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    artista VARCHAR(255) NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT NOT NULL,
+    imagem VARCHAR(255) NULL,
+    dia DATE NOT NULL,
+    hora TIME NOT NULL,
+    localizacao VARCHAR(255) NOT NULL,
+    cidade VARCHAR(255) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    categoria_id INT NOT NULL,
+    FOREIGN KEY (categoria_id) REFERENCES categoria(id)
+);
