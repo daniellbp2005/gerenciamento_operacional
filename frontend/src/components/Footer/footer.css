@@ -1,0 +1,7 @@
+.footer-link {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

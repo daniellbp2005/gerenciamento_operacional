@@ -1,13 +1,17 @@
 export default function FiltroCategoria() {
     return (
-        <section className="conteiner">
-            <div className="conteiner px-5">
-                <ul className="text-light d-flex gap-4 flex-wrap py-3 list-unstyled">
-                    <li className="border px-3 py-2 rounded border-primary bg-primary">Eventos</li>
-                    <li className="border px-3 py-2 rounded border-primary bg-primary">Exemplo 1</li>
-                    <li className="border px-3 py-2 rounded border-primary bg-primary">Exemplo 2</li>
-                    <li className="border px-3 py-2 rounded border-primary bg-primary">Exemplo 3</li>
-                </ul>
+        <section className="conteiner w-100">
+            <div className="conteiner px-5 flex-col py-3">
+                <div className="d-flex flex-column">
+                    <h3>Seja bem-vindo !</h3>
+                    <h1>Encontre os eventos mais perto de você.</h1>
+                </div>
+                <div className="d-flex gap-2 flex-wrap">
+                    <div className="btn border py-2 rounded border-primary bg-primary text-light">Todos</div>
+                    <div className="btn border py-2 rounded border-primary bg-primary text-light"> Disponivél</div>
+                    <div className="btn border py-2 rounded border-primary bg-primary text-light">Esgotado</div>
+                    <div className="btn border py-2 rounded border-primary bg-primary text-light">Recentes</div>
+                </div>
             </div>
         </section>
     );

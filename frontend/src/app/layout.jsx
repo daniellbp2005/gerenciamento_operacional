@@ -1,15 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Geist, Geist_Mono } from "next/font/google";
-import Header from '@/components/Header'
+import { Sora } from 'next/font/google'
+import BootstrapClient from "@/components/bootstrapClient";
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import SideBar from '@/components/sideBar';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const soraFont = Sora({
+  weight: ["300","400","500","600","700","800"],
   subsets: ["latin"],
 });
 
@@ -20,10 +18,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className='bg-dark'>
+    <html lang="p-tbr" className={` ${soraFont.className}`}>
+      <body className={`bg-dark ${soraFont.className} d-flex flex-column min-vh-100 vw-50`}>
+        <BootstrapClient />
         <Header />
+        <div className='d-flex flex-grow-1' style={{marginLeft: 250}}>
+          <SideBar />
         {children}
+        </div>
+        {/* <Footer /> */}
       </body>
     </html>
   );
