@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS eventos (
     localizacao VARCHAR(255) NOT NULL,
     cidade VARCHAR(255) NOT NULL,
     preco DECIMAL(10,2) NOT NULL,
-    status VARCHAR(20) NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT "Disponovél",
     categoria_id INT NOT NULL,
     FOREIGN KEY (categoria_id) REFERENCES categoria(id)
 );

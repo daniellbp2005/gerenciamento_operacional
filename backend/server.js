@@ -1,8 +1,10 @@
-const express = requere("express");
+const express = require("express");
 const app = express();
 app.use(express.json());
 const port = 3305; // banco vai ser 3306 e front 8000 ou 3000
-const routesUm = require("");
+const routesEventos = require("./routes/eventos.js");
+
+app.use("/api/evetos",routesEventos)
 
 app.use((erro, req, res, next) => {
   console.error("Erro:", erro);
