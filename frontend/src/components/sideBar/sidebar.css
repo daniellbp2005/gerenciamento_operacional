@@ -1,3 +1,11 @@
 .side-width{
     width: 250px;
 }
+.active {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+.active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}

@@ -5,9 +5,9 @@ import { Globe } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="bg-light">
+    <main className="bg-light bg-light d-flex flex-column align-items-start gap-2 px-5 py-3 vw-50 flex-grow-1">
       <FiltroCategoria />
-      <section className="conteiner px-5 w-100">
+      <section className="conteiner w-100">
         <div className="row gap-3">
           <CardEventos 
           titulo={"Exemple title"} 

@@ -1,7 +1,7 @@
 export default function FiltroCategoria() {
     return (
         <section className="conteiner w-100">
-            <div className="conteiner px-5 flex-col py-3">
+            <div className="conteiner">
                 <div className="d-flex flex-column">
                     <h3>Seja bem-vindo !</h3>
                     <h1>Encontre os eventos mais perto de você.</h1>

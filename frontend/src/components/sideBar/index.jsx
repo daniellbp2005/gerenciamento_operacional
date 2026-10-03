@@ -1,78 +1,54 @@
+'use client'
 import './sidebar.css'
+import { House, CalendarDays, SquarePen, CirclePlus } from 'lucide-react';
+import Logo from '../Logo';
+import { usePathname } from 'next/navigation';
+
 export default function SideBar() {
+    const url = usePathname();
     return (
         <div
             className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark fixed-top h-100 side-width"
         >
 
-            <ul className="nav nav-pills flex-column mb-auto mt-2">
+            <ul className="nav nav-pills flex-column mb-auto mt-2 gap-1">
                 <li className="">
                     <a
                         href="/"
-                        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none header-link"
+                        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
                     >
-                        <span className="pl-4 fs-5 text-light border-bottom border-secondary">Eventos Musicais</span>
+                        <span className="py-2"> <Logo /> </span>
                     </a>
                 </li>
                 {" "}
                 <li className="nav-item">
                     {" "}
-                    <a href="#" className="nav-link active" aria-current="page">
+                    <a href="/" className={`nav-link d-flex flex-col align-items-center gap-2 text-light ${url === "/" ? "active" : null}`} aria-current="page">
+                        <House size={18} />
+                        <span>Home</span>
+                    </a>{" "}
+                </li>{" "}
+                {/* <li>
+                    {" "}
+                    <a href="/Eventos" className={`nav-link d-flex flex-col align-items-center gap-2 text-light ${url === "/Eventos" ? "active" : null}`}>
                         {" "}
-                        <svg
-                            className="bi pe-none me-2"
-                            width={16}
-                            height={16}
-                            aria-hidden="true"
-                        >
-                            <use xlinkHref="#home" />
-                        </svg>
-                        Home
+                        <CalendarDays size={18} />
+                        <span>Eventos</span>
+                    </a>{" "}
+                </li>{" "} */}
+                <li>
+                    {" "}
+                    <a href="/Editar" className={`nav-link text-white d-flex flex-col align-items-center gap-2 text-light ${url === "/Editar" ? "active " : null}`}>
+                        {" "}
+                        <SquarePen size={18} />
+                        <span>Editar</span>
                     </a>{" "}
                 </li>{" "}
                 <li>
                     {" "}
-                    <a href="#" className="nav-link text-white">
-                        {" "}
-                        <svg
-                            className="bi pe-none me-2"
-                            width={16}
-                            height={16}
-                            aria-hidden="true"
-                        >
-                            <use xlinkHref="#speedometer2" />
-                        </svg>
-                        Eventos
-                    </a>{" "}
-                </li>{" "}
-                <li>
-                    {" "}
-                    <a href="#" className="nav-link text-white">
-                        {" "}
-                        <svg
-                            className="bi pe-none me-2"
-                            width={16}
-                            height={16}
-                            aria-hidden="true"
-                        >
-                            <use xlinkHref="#table" />
-                        </svg>
-                        Editar
-                    </a>{" "}
-                </li>{" "}
-                <li>
-                    {" "}
-                    <a href="#" className="nav-link text-white">
-                        {" "}
-                        <svg
-                            className="bi pe-none me-2"
-                            width={16}
-                            height={16}
-                            aria-hidden="true"
-                        >
-                            <use xlinkHref="#grid" />
-                        </svg>
-                        Ciar
+                    <a href="/Criar" className={`nav-link text-white d-flex flex-col align-items-center gap-2 text-light ${url === "/Criar" ? "active" : null}`}>
+                        <CirclePlus size={18} />
+                        <span>Ciar</span>
                     </a>{" "}
                 </li>{" "}
             </ul>{" "}

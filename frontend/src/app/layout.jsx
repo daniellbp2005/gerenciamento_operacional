@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="p-tbr" className={` ${soraFont.className}`}>
       <body className={`bg-dark ${soraFont.className} d-flex flex-column min-vh-100 vw-50`}>
         <BootstrapClient />
-        <Header />
+        {/* <Header /> */}
         <div className='d-flex flex-grow-1' style={{marginLeft: 250}}>
           <SideBar />
         {children}
