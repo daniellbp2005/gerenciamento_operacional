@@ -1,7 +1,13 @@
-export default function Criar(){
-    return(
-        <main className="bg-light">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit modi minima obcaecati repudiandae amet consectetur exercitationem quis ea inventore ad nisi, eaque architecto necessitatibus fugiat fuga voluptas corporis? Fuga, quia.
+import FormCriar from "@/components/FormCriar";
+
+export default function Criar() {
+    return (
+        <main className="bg-light w-100 d-flex flex-column align-items-start gap-2 px-5 py-3 vw-50 flex-grow-1">
+            <div className="d-flex flex-column justify-content-start">
+                <h3>Seja bem-vindo !</h3>
+                <h1>Crie o evento.</h1>
+            </div>
+            <FormCriar />
         </main>
     )
 }

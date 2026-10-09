@@ -1,6 +1,8 @@
 export default function CardEventos({ titulo, artista, categoria, descricao, selecionado }) {
     return (
         <div className="card col-4" style={{ width: "16rem" }}>
+            <img src="https://placehold.co/600x400?text=Imagem"
+                className="card-img-top" alt="..." />
 
             {categoria && categoria === ''}
             {categoria && categoria === ''}
