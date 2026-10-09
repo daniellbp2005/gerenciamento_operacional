@@ -1,5 +1,5 @@
 const { json } = require("express");
-const db = require("../db");
+const db = require("../db/conexao.js");
 
 async function listarEventos(req, res, next) {
     try {
@@ -15,7 +15,7 @@ async function listarEventos(req, res, next) {
             eventos.cidade,
             eventos.preco,
             eventos.status,
-            categoria.categoria,
+            categoria.categoria
             FROM eventos
             INNER JOIN categoria
             ON eventos.categoria_id = categoria.id

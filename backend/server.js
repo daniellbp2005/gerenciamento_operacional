@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
+const cors = require("cors")
 app.use(express.json());
 const port = 3305; // banco vai ser 3306 e front 8000 ou 3000
 const routesEventos = require("./routes/eventos.js");
 
-app.use("/api/evetos",routesEventos)
+app.use(cors());
+app.use("/api/eventos",routesEventos);
 
 app.use((erro, req, res, next) => {
   console.error("Erro:", erro);

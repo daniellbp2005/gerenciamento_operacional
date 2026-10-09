@@ -7,6 +7,7 @@ const db = mysql.createPool({
     database: process.env.DB_NAME,
     user: process.env.DB_USER,
     password: process.env.USER_PASS,
+    port: process.env.DB_PORT,
     connectionLimit: 10, // limite de conexões simultanêas
     waitForConnections: true, // criar um fila de novas requisições, caso o server n suporte mais e p ñ perder nenhuma requizição
     queueLimit: 0, // tamanho da fila. qnts requisições ficarão auradando as 10 finalizarem. usar 0 (ou melhor infinito) apenas em ambiente de teste, em produção, limitar a 30,40,50 dependendo do servidor

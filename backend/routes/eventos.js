@@ -1,5 +1,5 @@
 const express = require("express");
-const db = './db';
+const db = require("../db/conexao.js")
 
 const router = express.Router();
 
