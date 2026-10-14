@@ -25,11 +25,17 @@ export default function Home() {
         if (filtro === 'Rock') {
           setEvento(data.produtos.filter((a) => a.categoria === 'Rock'))
         }
+        if (filtro === "Gospel") {
+          setEvento(data.produtos.filter((a) => a.categoria === "Gospel"))
+        }
         if (filtro === 'Sertanejo') {
           setEvento(data.produtos.filter((a) => a.categoria === 'Sertanejo'))
         }
         if (filtro === 'MPB') {
           setEvento(data.produtos.filter((a) => a.categoria === 'MPB'))
+        }
+        if (filtro === "Workshop") {
+          setEvento(data.produtos.filter((a) => a.categoria === 'Workshop'))
         }
 
       } catch {
@@ -45,8 +51,10 @@ export default function Home() {
         todos={() => setFiltro('todos')}
         disponivel={() => setFiltro('Disponível')}
         rock={() => setFiltro('Rock')}
+        gospel={() => setFiltro('Gospel')}
         sertanejo={() => setFiltro('Sertanejo')}
         mpb={() => setFiltro('MPB')}
+        workshop={() => setFiltro("Workshop")}
       // outros={() => setFiltro('outros')}
       />
       <section className="conteiner w-100">
